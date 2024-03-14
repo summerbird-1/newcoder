@@ -9,4 +9,9 @@ spring:
     driver-class-name: com.mysql.cj.jdbc.Driver
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml          #mapper映射文件路径
-  type-aliases-package: com.zjz.domain            #配置哪个包下面的类有默认的别名
+  type-aliases-package: com.zjz.server.entity            #配置哪个包下面的类有默认的别名
+  configuration:
+    # 自增主键
+    use-generated-keys: true
+    # 驼峰命名匹配
+    map-underscore-to-camel-case: true
