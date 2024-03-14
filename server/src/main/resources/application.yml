@@ -1,5 +1,10 @@
 server:
   port: 8080
+  servlet:
+    context-path: /community
+    session:
+      cookie:
+        path: /
 #整合Mybatis相关配置
 spring:
   datasource:
@@ -7,6 +12,17 @@ spring:
     username: root
     password: 123456
     driver-class-name: com.mysql.cj.jdbc.Driver
+  mail:
+    host: smtp.qq.com
+    port: 465
+    username: zhangcoder@foxmail.com
+    password: wxupxodklkvzdchi
+    protocol: smtps
+    properties:
+      mail:
+        smtp:
+          ssl:
+            enable: true
 mybatis:
   mapper-locations: classpath:mapper/*Mapper.xml          #mapper映射文件路径
   type-aliases-package: com.zjz.server.entity            #配置哪个包下面的类有默认的别名
@@ -15,3 +31,6 @@ mybatis:
     use-generated-keys: true
     # 驼峰命名匹配
     map-underscore-to-camel-case: true
+community:
+  path:
+    domain: http://localhost:5173

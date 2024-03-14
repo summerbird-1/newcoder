@@ -4,8 +4,26 @@
     <sql id="selectFields">
         id, username, password, salt, email, type, status, activation_code, header_url, create_time
     </sql>
+    <sql id="insertFields">
+        username, password, salt, email, type, status, activation_code, header_url, create_time
+    </sql>
+    <insert id="insertUser" parameterType="User" keyProperty="id">
+        insert into user (<include refid="insertFields"/>)
+        values(#{username}, #{password}, #{salt}, #{email}, #{type}, #{status}, #{activationCode}, #{headerUrl}, #{createTime})
+    </insert>
+    <update id="updateStatus">
+        update user set status = #{i} where id = #{userId}
+    </update>
     <select id="findUserById" resultType="com.zjz.server.entity.User">
         select <include refid="selectFields"/>
             from user where id = #{id}
+    </select>
+    <select id="findUserByName" resultType="com.zjz.server.entity.User">
+        select <include refid="selectFields"/>
+            from user where username = #{username}
+    </select>
+    <select id="findUserByMail" resultType="com.zjz.server.entity.User">
+        select <include refid="selectFields"/>
+            from user where email = #{email}
     </select>
 </mapper>
