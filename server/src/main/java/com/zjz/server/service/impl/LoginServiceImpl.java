@@ -9,6 +9,7 @@ import com.zjz.server.entity.vo.UserVo;
 import com.zjz.server.service.LoginService;
 import com.zjz.server.service.UserService;
 import com.zjz.server.utils.CommunityUtil;
+import com.zjz.server.utils.JwtTokenUtil;
 import com.zjz.server.utils.RedisCache;
 import com.zjz.server.utils.RedisKeyUtil;
 import lombok.Data;
@@ -24,6 +25,7 @@ import org.springframework.stereotype.Service;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 @Service
 public class LoginServiceImpl implements LoginService {
@@ -32,6 +34,8 @@ public class LoginServiceImpl implements LoginService {
     private RedisCache redisCache;
     @Autowired
     private UserService userService;
+    @Autowired
+    private JwtTokenUtil jwtTokenUtil;
     /**
      * 用户登录接口。
      *
@@ -98,7 +102,11 @@ public class LoginServiceImpl implements LoginService {
               return map;
           }
           // 登录成功，生成token并返回用户信息
-          String token = "scdsdvdvddvdvsvsdvdvsvdvdvdvd";
+        String token = jwtTokenUtil.generateAccessToken(username);
+         if(rememberMe)
+             redisCache.setCacheObject(token,user.getId(),3600*24, TimeUnit.SECONDS);
+         else
+             redisCache.setCacheObject(token,user.getId(),3600, TimeUnit.SECONDS);
         UserVo userVo = new UserVo();
         BeanUtils.copyProperties(user,userVo);
         map.put("token",token);
