@@ -63,7 +63,7 @@ public class ResponseResult<T> implements Serializable {
         return result;
     }
     public static<T> ResponseResult<T> fail(T data){
-        return build(data, AppHttpCodeEnum.SYSTEM_ERROR.getCode(), AppHttpCodeEnum.SYSTEM_ERROR.getMsg());
+        return build(data, AppHttpCodeEnum.FAIL.getCode(), AppHttpCodeEnum.FAIL.getMsg());
     }
     public static ResponseResult errorResult(AppHttpCodeEnum enums){
         return setAppHttpCodeEnum(enums,enums.getMsg());

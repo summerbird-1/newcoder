@@ -48,8 +48,8 @@ public class LoginServiceImpl implements LoginService {
         Map<String,Object> map = new HashMap<>();
         // 验证码为空的校验
         if(StringUtils.isBlank(kaptchaOwner)){
-            map.put("codeMsg","验证码为空");
-            return ResponseResult.fail(map);
+            map.put("codeMsg","验证码错误");
+            return ResponseResult.okResult(map);
         }
         // 从Redis获取验证码的关键字和值
         String kaptchaKey = RedisKeyUtil.getKaptchaKey(kaptchaOwner);
@@ -57,7 +57,7 @@ public class LoginServiceImpl implements LoginService {
         // 验证码错误的校验
         if(StringUtils.isBlank(kaptcha) || StringUtils.isBlank(loginDto.getCode()) || !loginDto.getCode().equalsIgnoreCase(kaptcha)){
             map.put("codeMsg","验证码错误");
-            return ResponseResult.fail(map);
+            return ResponseResult.okResult(map);
         }
         // 执行登录逻辑
         map = Login(loginDto.getUsername(),loginDto.getPassword(),loginDto.getRememberMe());
@@ -76,29 +76,29 @@ public class LoginServiceImpl implements LoginService {
           Map<String, Object> map = new HashMap<>();
           // 检查用户名是否为空
           if(StringUtils.isBlank(username)){
-              map.put("codeMsg","用户名不能为空");
+              map.put("usernameMsg","用户名不能为空");
               return map;
           }
           // 检查密码是否为空
           if(StringUtils.isBlank(password)){
-              map.put("codeMsg","密码不能为空");
+              map.put("passwordMsg","密码不能为空");
               return map;
           }
           // 根据用户名查找用户
           User user = userService.findUserByUserName(username);
           if(user == null){
-              map.put("codeMsg","用户不存在");
+              map.put("usernameMsg","用户不存在");
               return map;
           }
           // 检查用户是否激活
           if(user.getStatus() == 0){
-              map.put("codeMsg","用户未激活");
+              map.put("usernameMsg","用户未激活");
               return map;
           }
           // 对密码进行加密处理并与数据库中的密码进行比较
           password = CommunityUtil.md5(password+user.getSalt());
           if(!password.equals(user.getPassword())){
-              map.put("codeMsg","密码错误");
+              map.put("passwordMsg","密码错误");
               return map;
           }
           // 登录成功，生成token并返回用户信息
