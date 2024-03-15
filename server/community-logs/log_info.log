@@ -1,0 +1,176 @@
+2024-03-15 17:25:37,317 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:55] Starting ServerApplication using Java 1.8.0_401 on CC with PID 3992 (D:\2718075060\Desk\sspku\WORKDIR\newcoder\server\target\classes started by 27180 in D:\2718075060\Desk\sspku\WORKDIR\newcoder\server)
+2024-03-15 17:25:37,318 INFO [restartedMain] c.z.s.ServerApplication [SpringApplication.java:645] No active profile set, falling back to 1 default profile: "default"
+2024-03-15 17:25:37,365 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-15 17:25:37,365 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-15 17:25:38,199 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-15 17:25:38,203 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-15 17:25:38,237 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2024-03-15 17:25:38,955 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2024-03-15 17:25:38,957 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2024-03-15 17:25:38,958 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2024-03-15 17:25:38,958 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-03-15 17:25:38,962 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2024-03-15 17:25:38,972 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-15 17:25:38,973 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-15 17:25:38,973 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-03-15 17:25:39,101 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-15 17:25:39,102 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1736 ms
+2024-03-15 17:25:40,345 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2024-03-15 17:25:40,365 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-15 17:25:40,384 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2024-03-15 17:25:40,395 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:61] Started ServerApplication in 3.644 seconds (JVM running for 5.09)
+2024-03-15 17:25:52,692 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15 17:25:52,692 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2024-03-15 17:25:52,694 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
+2024-03-15 17:25:52,763 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2024-03-15 17:25:54,187 INFO [http-nio-8080-exec-1] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2024-03-15 17:28:43,986 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2024-03-15 17:28:44,012 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2024-03-15 17:28:50,376 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:55] Starting ServerApplication using Java 1.8.0_401 on CC with PID 26580 (D:\2718075060\Desk\sspku\WORKDIR\newcoder\server\target\classes started by 27180 in D:\2718075060\Desk\sspku\WORKDIR\newcoder\server)
+2024-03-15 17:28:50,382 INFO [restartedMain] c.z.s.ServerApplication [SpringApplication.java:645] No active profile set, falling back to 1 default profile: "default"
+2024-03-15 17:28:50,557 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-15 17:28:50,558 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-15 17:28:51,925 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-15 17:28:51,929 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-15 17:28:51,965 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 15 ms. Found 0 Redis repository interfaces.
+2024-03-15 17:28:52,856 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2024-03-15 17:28:52,858 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2024-03-15 17:28:52,858 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2024-03-15 17:28:52,858 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-03-15 17:28:52,862 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2024-03-15 17:28:52,874 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-15 17:28:52,874 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-15 17:28:52,874 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-03-15 17:28:53,057 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-15 17:28:53,059 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 2498 ms
+2024-03-15 17:28:54,605 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2024-03-15 17:28:54,627 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-15 17:28:54,649 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2024-03-15 17:28:54,662 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:61] Started ServerApplication in 5.633 seconds (JVM running for 9.0)
+2024-03-15 17:29:04,290 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15 17:29:04,291 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2024-03-15 17:29:04,294 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 2 ms
+2024-03-15 17:32:50,745 INFO [http-nio-8080-exec-5] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2024-03-15 17:32:55,310 INFO [http-nio-8080-exec-5] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2024-03-15 17:58:30,036 INFO [main] c.z.s.mdTest [StartupInfoLogger.java:55] Starting mdTest using Java 1.8.0_401 on CC with PID 20372 (started by 27180 in D:\2718075060\Desk\sspku\WORKDIR\newcoder\server)
+2024-03-15 17:58:30,039 INFO [main] c.z.s.mdTest [SpringApplication.java:645] No active profile set, falling back to 1 default profile: "default"
+2024-03-15 17:58:30,997 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-15 17:58:31,003 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-15 17:58:31,041 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2024-03-15 17:58:34,651 INFO [main] c.z.s.mdTest [StartupInfoLogger.java:61] Started mdTest in 5.154 seconds (JVM running for 6.829)
+2024-03-15 17:58:52,408 INFO [main] c.z.s.mdTest [StartupInfoLogger.java:55] Starting mdTest using Java 1.8.0_401 on CC with PID 13100 (started by 27180 in D:\2718075060\Desk\sspku\WORKDIR\newcoder\server)
+2024-03-15 17:58:52,410 INFO [main] c.z.s.mdTest [SpringApplication.java:645] No active profile set, falling back to 1 default profile: "default"
+2024-03-15 17:58:53,567 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-15 17:58:53,574 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-15 17:58:53,614 INFO [main] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 18 ms. Found 0 Redis repository interfaces.
+2024-03-15 17:58:56,740 INFO [main] c.z.s.mdTest [StartupInfoLogger.java:61] Started mdTest in 4.904 seconds (JVM running for 6.663)
+2024-03-15 17:59:21,647 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2024-03-15 17:59:21,677 INFO [SpringApplicationShutdownHook] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2024-03-15 17:59:25,391 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:55] Starting ServerApplication using Java 1.8.0_401 on CC with PID 24568 (D:\2718075060\Desk\sspku\WORKDIR\newcoder\server\target\classes started by 27180 in D:\2718075060\Desk\sspku\WORKDIR\newcoder\server)
+2024-03-15 17:59:25,392 INFO [restartedMain] c.z.s.ServerApplication [SpringApplication.java:645] No active profile set, falling back to 1 default profile: "default"
+2024-03-15 17:59:25,434 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-15 17:59:25,435 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-15 17:59:26,285 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-15 17:59:26,288 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-15 17:59:26,317 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2024-03-15 17:59:27,035 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2024-03-15 17:59:27,037 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2024-03-15 17:59:27,037 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2024-03-15 17:59:27,037 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-03-15 17:59:27,041 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2024-03-15 17:59:27,050 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-15 17:59:27,050 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-15 17:59:27,050 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-03-15 17:59:27,170 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-15 17:59:27,170 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1735 ms
+2024-03-15 17:59:28,271 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2024-03-15 17:59:28,301 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-15 17:59:28,316 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2024-03-15 17:59:28,327 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:61] Started ServerApplication in 3.399 seconds (JVM running for 4.807)
+2024-03-15 17:59:34,611 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15 17:59:34,611 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2024-03-15 17:59:34,613 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 2 ms
+2024-03-15 17:59:52,396 INFO [http-nio-8080-exec-5] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2024-03-15 17:59:53,296 INFO [http-nio-8080-exec-5] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.
+2024-03-15 18:02:59,241 INFO [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [LocalDevToolsAutoConfiguration.java:210] Restarting due to 1 class path change (0 additions, 1 deletion, 0 modifications)
+2024-03-15 18:02:59,799 INFO [Thread-13] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Pausing ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:02:59,799 INFO [Thread-13] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2024-03-15 18:02:59,802 INFO [Thread-13] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Destroying Spring FrameworkServlet 'dispatcherServlet'
+2024-03-15 18:02:59,814 INFO [Thread-13] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:02:59,816 INFO [Thread-13] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Destroying ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:02:59,970 INFO [Thread-13] c.z.h.HikariDataSource [HikariDataSource.java:350] HikariPool-1 - Shutdown initiated...
+2024-03-15 18:03:00,007 INFO [Thread-13] c.z.h.HikariDataSource [HikariDataSource.java:352] HikariPool-1 - Shutdown completed.
+2024-03-15 18:03:00,276 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:55] Starting ServerApplication using Java 1.8.0_401 on CC with PID 24568 (D:\2718075060\Desk\sspku\WORKDIR\newcoder\server\target\classes started by 27180 in D:\2718075060\Desk\sspku\WORKDIR\newcoder\server)
+2024-03-15 18:03:00,277 INFO [restartedMain] c.z.s.ServerApplication [SpringApplication.java:645] No active profile set, falling back to 1 default profile: "default"
+2024-03-15 18:03:00,598 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-15 18:03:00,599 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-15 18:03:00,609 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 10 ms. Found 0 Redis repository interfaces.
+2024-03-15 18:03:00,717 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2024-03-15 18:03:00,718 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2024-03-15 18:03:00,718 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2024-03-15 18:03:00,718 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-03-15 18:03:00,718 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2024-03-15 18:03:00,719 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:03:00,719 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-15 18:03:00,719 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-03-15 18:03:00,762 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-15 18:03:00,763 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 482 ms
+2024-03-15 18:03:01,038 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2024-03-15 18:03:01,048 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:03:01,051 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2024-03-15 18:03:01,054 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:61] Started ServerApplication in 0.84 seconds (JVM running for 217.543)
+2024-03-15 18:03:01,057 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2024-03-15 18:03:03,533 INFO [File Watcher] o.s.b.d.a.LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener [LocalDevToolsAutoConfiguration.java:210] Restarting due to 1 class path change (1 addition, 0 deletions, 0 modifications)
+2024-03-15 18:03:04,061 INFO [Thread-20] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Pausing ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:03:04,061 INFO [Thread-20] o.a.c.c.StandardService [DirectJDKLog.java:173] Stopping service [Tomcat]
+2024-03-15 18:03:04,068 INFO [Thread-20] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Stopping ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:03:04,072 INFO [Thread-20] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Destroying ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:03:04,335 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:55] Starting ServerApplication using Java 1.8.0_401 on CC with PID 24568 (D:\2718075060\Desk\sspku\WORKDIR\newcoder\server\target\classes started by 27180 in D:\2718075060\Desk\sspku\WORKDIR\newcoder\server)
+2024-03-15 18:03:04,335 INFO [restartedMain] c.z.s.ServerApplication [SpringApplication.java:645] No active profile set, falling back to 1 default profile: "default"
+2024-03-15 18:03:04,778 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-15 18:03:04,778 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-15 18:03:04,790 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+2024-03-15 18:03:04,891 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2024-03-15 18:03:04,891 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2024-03-15 18:03:04,891 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2024-03-15 18:03:04,891 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-03-15 18:03:04,891 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2024-03-15 18:03:04,892 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:03:04,892 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-15 18:03:04,892 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-03-15 18:03:04,926 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-15 18:03:04,926 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 587 ms
+2024-03-15 18:03:05,159 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2024-03-15 18:03:05,167 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:03:05,180 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2024-03-15 18:03:05,184 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:61] Started ServerApplication in 0.928 seconds (JVM running for 221.671)
+2024-03-15 18:03:05,185 INFO [restartedMain] o.s.b.d.a.ConditionEvaluationDeltaLoggingListener [ConditionEvaluationDeltaLoggingListener.java:63] Condition evaluation unchanged
+2024-03-15 18:06:35,512 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15 18:06:35,513 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2024-03-15 18:06:35,514 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 1 ms
+2024-03-15 18:12:05,738 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:55] Starting ServerApplication using Java 1.8.0_401 on CC with PID 8256 (D:\2718075060\Desk\sspku\WORKDIR\newcoder\server\target\classes started by 27180 in D:\2718075060\Desk\sspku\WORKDIR\newcoder\server)
+2024-03-15 18:12:05,740 INFO [restartedMain] c.z.s.ServerApplication [SpringApplication.java:645] No active profile set, falling back to 1 default profile: "default"
+2024-03-15 18:12:05,783 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2024-03-15 18:12:05,783 INFO [restartedMain] o.s.b.d.e.DevToolsPropertyDefaultsPostProcessor [DeferredLog.java:255] For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2024-03-15 18:12:06,620 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:262] Multiple Spring Data modules found, entering strict repository configuration mode
+2024-03-15 18:12:06,624 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:132] Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2024-03-15 18:12:06,653 INFO [restartedMain] o.s.d.r.c.RepositoryConfigurationDelegate [RepositoryConfigurationDelegate.java:201] Finished Spring Data repository scanning in 14 ms. Found 0 Redis repository interfaces.
+2024-03-15 18:12:07,326 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:108] Tomcat initialized with port(s): 8080 (http)
+2024-03-15 18:12:07,328 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] Loaded Apache Tomcat Native library [1.2.35] using APR version [1.7.0].
+2024-03-15 18:12:07,329 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR capabilities: IPv6 [true], sendfile [true], accept filters [false], random [true], UDS [true].
+2024-03-15 18:12:07,329 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] APR/OpenSSL configuration: useAprConnector [false], useOpenSSL [true]
+2024-03-15 18:12:07,335 INFO [restartedMain] o.a.c.c.AprLifecycleListener [DirectJDKLog.java:173] OpenSSL successfully initialized [OpenSSL 1.1.1q  5 Jul 2022]
+2024-03-15 18:12:07,347 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Initializing ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:12:07,347 INFO [restartedMain] o.a.c.c.StandardService [DirectJDKLog.java:173] Starting service [Tomcat]
+2024-03-15 18:12:07,348 INFO [restartedMain] o.a.c.c.StandardEngine [DirectJDKLog.java:173] Starting Servlet engine: [Apache Tomcat/9.0.68]
+2024-03-15 18:12:07,472 INFO [restartedMain] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring embedded WebApplicationContext
+2024-03-15 18:12:07,473 INFO [restartedMain] o.s.b.w.s.c.ServletWebServerApplicationContext [ServletWebServerApplicationContext.java:290] Root WebApplicationContext: initialization completed in 1689 ms
+2024-03-15 18:12:08,660 INFO [restartedMain] o.s.b.d.a.OptionalLiveReloadServer [OptionalLiveReloadServer.java:59] LiveReload server is running on port 35729
+2024-03-15 18:12:08,680 INFO [restartedMain] o.a.c.h.Http11NioProtocol [DirectJDKLog.java:173] Starting ProtocolHandler ["http-nio-8080"]
+2024-03-15 18:12:08,695 INFO [restartedMain] o.s.b.w.e.t.TomcatWebServer [TomcatWebServer.java:220] Tomcat started on port(s): 8080 (http) with context path '/community'
+2024-03-15 18:12:08,707 INFO [restartedMain] c.z.s.ServerApplication [StartupInfoLogger.java:61] Started ServerApplication in 3.41 seconds (JVM running for 4.928)
+2024-03-15 18:12:15,741 INFO [http-nio-8080-exec-1] o.a.c.c.C.[.[.[/community] [DirectJDKLog.java:173] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-03-15 18:12:15,742 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:525] Initializing Servlet 'dispatcherServlet'
+2024-03-15 18:12:15,742 INFO [http-nio-8080-exec-1] o.s.w.s.DispatcherServlet [FrameworkServlet.java:547] Completed initialization in 0 ms
+2024-03-15 18:13:33,634 INFO [http-nio-8080-exec-5] c.z.h.HikariDataSource [HikariDataSource.java:110] HikariPool-1 - Starting...
+2024-03-15 18:13:34,570 INFO [http-nio-8080-exec-5] c.z.h.HikariDataSource [HikariDataSource.java:123] HikariPool-1 - Start completed.

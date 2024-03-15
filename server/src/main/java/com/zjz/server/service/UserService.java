@@ -2,6 +2,7 @@ package com.zjz.server.service;
 
 import com.zjz.server.entity.ResponseResult;
 import com.zjz.server.entity.User;
+import com.zjz.server.entity.dto.LoginDto;
 
 import java.util.List;
 
@@ -12,5 +13,6 @@ public interface UserService {
 
     ResponseResult<?> activate(int userId,String activationCode);
 
-    ResponseResult<?> login(User user);
+
+    User findUserByUserName(String username);
 }
