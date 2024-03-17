@@ -1,7 +1,6 @@
 package com.zjz.server.controller;
 
 import com.google.code.kaptcha.Producer;
-import com.zjz.server.config.KaptchaConfig;
 import com.zjz.server.entity.ResponseResult;
 import com.zjz.server.entity.User;
 import com.zjz.server.entity.dto.LoginDto;
@@ -13,6 +12,7 @@ import com.zjz.server.utils.RedisKeyUtil;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 
@@ -20,8 +20,6 @@ import javax.imageio.ImageIO;
 import javax.servlet.ServletOutputStream;
 import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -33,8 +31,8 @@ public class LoginController {
     private UserService userService;
     @Autowired
     private Producer kaptchaProducer;
-    @Autowired
-    private RedisCache redisCache;
+   @Autowired
+   private StringRedisTemplate stringRedisTemplate;
     @Autowired
     private LoginService loginService;
     @Value("${server.servlet.session.cookie.path}")
@@ -68,7 +66,7 @@ public class LoginController {
 
         //将验证码存入redis
         String kaptchaKey = RedisKeyUtil.getKaptchaKey(kaptchaOwner);
-        redisCache.setCacheObject(kaptchaKey, text, 60, TimeUnit.SECONDS);
+        stringRedisTemplate.opsForValue().set(kaptchaKey,text,60,TimeUnit.SECONDS);
         // 设置响应的内容类型为PNG图像
         response.setContentType("image/png");
         try{

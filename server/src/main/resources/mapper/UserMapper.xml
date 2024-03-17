@@ -14,6 +14,9 @@
     <update id="updateStatus">
         update user set status = #{i} where id = #{userId}
     </update>
+    <update id="updateHeader">
+        update user set header_url = #{url} where id = #{id}
+    </update>
     <select id="findUserById" resultType="com.zjz.server.entity.User">
         select <include refid="selectFields"/>
             from user where id = #{id}

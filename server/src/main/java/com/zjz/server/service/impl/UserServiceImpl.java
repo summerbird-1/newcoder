@@ -1,15 +1,14 @@
 package com.zjz.server.service.impl;
 
+
 import com.zjz.server.dao.UserMapper;
 import com.zjz.server.entity.ResponseResult;
 import com.zjz.server.entity.User;
-import com.zjz.server.entity.dto.LoginDto;
 import com.zjz.server.enums.AppHttpCodeEnum;
 import com.zjz.server.service.UserService;
 import com.zjz.server.utils.CommunityUtil;
 import com.zjz.server.utils.MailClient;
 import com.zjz.server.utils.RedisCache;
-import com.zjz.server.utils.RedisKeyUtil;
 import org.apache.commons.lang3.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -17,10 +16,7 @@ import org.springframework.stereotype.Service;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-import javax.jws.soap.SOAPBinding;
 import java.time.LocalDateTime;
-import java.util.HashMap;
-import java.util.Map;
 import java.util.Objects;
 import java.util.Random;
 
@@ -109,6 +105,12 @@ public class UserServiceImpl implements UserService {
     @Override
     public User findUserByUserName(String username) {
         return userMapper.findUserByName(username);
+    }
+
+    @Override
+    public int updateHeader(Integer id, String url) {
+        //@TODO 更新缓存
+        return userMapper.updateHeader(id,url);
     }
 
 

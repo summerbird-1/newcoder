@@ -2,9 +2,6 @@ package com.zjz.server.service;
 
 import com.zjz.server.entity.ResponseResult;
 import com.zjz.server.entity.User;
-import com.zjz.server.entity.dto.LoginDto;
-
-import java.util.List;
 
 public interface UserService {
     User findUserById(int id);
@@ -15,4 +12,6 @@ public interface UserService {
 
 
     User findUserByUserName(String username);
+
+    int updateHeader(Integer id, String url);
 }

@@ -1,7 +1,7 @@
 package com.zjz.server.service.impl;
 
-import com.zjz.server.dao.UserMapper;
-import com.zjz.server.entity.LoginTicket;
+import cn.hutool.core.bean.BeanUtil;
+import cn.hutool.core.bean.copier.CopyOptions;
 import com.zjz.server.entity.ResponseResult;
 import com.zjz.server.entity.User;
 import com.zjz.server.entity.dto.LoginDto;
@@ -12,26 +12,24 @@ import com.zjz.server.utils.CommunityUtil;
 import com.zjz.server.utils.JwtTokenUtil;
 import com.zjz.server.utils.RedisCache;
 import com.zjz.server.utils.RedisKeyUtil;
-import lombok.Data;
-import lombok.extern.slf4j.Slf4j;
 import org.apache.commons.lang3.StringUtils;
-import org.apache.tomcat.util.http.parser.Authorization;
 import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.neo4j.Neo4jProperties;
-import org.springframework.data.annotation.AccessType;
+import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.stereotype.Service;
 
-import java.util.Date;
+import javax.annotation.Resource;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.TimeUnit;
 
+import static com.zjz.server.utils.CommunityConstant.LOGIN_USER_KEY;
+
 @Service
 public class LoginServiceImpl implements LoginService {
 
-    @Autowired
-    private RedisCache redisCache;
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
     @Autowired
     private UserService userService;
     @Autowired
@@ -53,7 +51,8 @@ public class LoginServiceImpl implements LoginService {
         }
         // 从Redis获取验证码的关键字和值
         String kaptchaKey = RedisKeyUtil.getKaptchaKey(kaptchaOwner);
-        String kaptcha = redisCache.getCacheObject(kaptchaKey);
+        String kaptcha = stringRedisTemplate.opsForValue().get(kaptchaKey);
+//        String kaptcha = redisCache.getCacheObject(kaptchaKey);
         // 验证码错误的校验
         if(StringUtils.isBlank(kaptcha) || StringUtils.isBlank(loginDto.getCode()) || !loginDto.getCode().equalsIgnoreCase(kaptcha)){
             map.put("codeMsg","验证码错误");
@@ -103,12 +102,20 @@ public class LoginServiceImpl implements LoginService {
           }
           // 登录成功，生成token并返回用户信息
         String token = jwtTokenUtil.generateAccessToken(username);
-         if(rememberMe)
-             redisCache.setCacheObject(token,user.getId(),3600*24, TimeUnit.SECONDS);
-         else
-             redisCache.setCacheObject(token,user.getId(),3600, TimeUnit.SECONDS);
-        UserVo userVo = new UserVo();
-        BeanUtils.copyProperties(user,userVo);
+        UserVo userVo = BeanUtil.copyProperties(user, UserVo.class);
+        Map<String, Object> userMap = BeanUtil.beanToMap(userVo, new HashMap<>(),
+                CopyOptions.create()
+                        .setIgnoreNullValue(true)
+                        .setFieldValueEditor((fieldName, fieldValue) -> fieldValue.toString()));
+        // 7.3.存储,这样可以使用token获取用户信息，该信息以hashmap形式返还
+        String tokenKey = LOGIN_USER_KEY + token;
+        stringRedisTemplate.opsForHash().putAll(tokenKey, userMap);
+        // 7.4.设置token有效期
+        if(rememberMe)
+            stringRedisTemplate.expire(tokenKey, 3600*24, TimeUnit.SECONDS);
+        else
+            stringRedisTemplate.expire(tokenKey, 3600, TimeUnit.SECONDS);
+
         map.put("token",token);
         map.put("user",userVo);
         return map;
