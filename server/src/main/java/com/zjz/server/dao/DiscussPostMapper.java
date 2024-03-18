@@ -4,6 +4,7 @@ package com.zjz.server.dao;
 
 import com.zjz.server.entity.DiscussPost;
 import org.apache.ibatis.annotations.Mapper;
+import org.apache.ibatis.annotations.Options;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
@@ -17,5 +18,6 @@ public interface DiscussPostMapper {
     // 参数时必须加
     int selectDiscussPostRows(@Param("userId")int userId);
 
-
+//    @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
+    int InsertDiscussPost(DiscussPost discussPost);
 }

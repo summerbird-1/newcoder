@@ -1,6 +1,5 @@
 package com.zjz.server.utils;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.BoundSetOperations;
 import org.springframework.data.redis.core.HashOperations;
 import org.springframework.data.redis.core.RedisTemplate;
@@ -10,17 +9,14 @@ import org.springframework.stereotype.Component;
 import java.util.*;
 import java.util.concurrent.TimeUnit;
 
-/**
- * spring redis 工具类
- *
- * @author cc
- **/
-@SuppressWarnings(value = { "unchecked", "rawtypes" })
 @Component
-public class RedisCache
-{
-    @Autowired
-    public RedisTemplate redisTemplate;
+public class RedisCache {
+
+    private final RedisTemplate redisTemplate;
+
+    public RedisCache(RedisTemplate redisTemplate) {
+        this.redisTemplate = redisTemplate;
+    }
 
     /**
      * 缓存基本的对象，Integer、String、实体类等
@@ -68,7 +64,7 @@ public class RedisCache
      */
     public boolean expire(final String key, final long timeout, final TimeUnit unit)
     {
-        return redisTemplate.expire(key, timeout, unit);
+        return Boolean.TRUE.equals(redisTemplate.expire(key, timeout, unit));
     }
 
     /**
@@ -147,6 +143,20 @@ public class RedisCache
     }
 
     /**
+     * 缓存Set元素
+     *
+     * @param key 缓存键值
+     * @param value 缓存的数据
+     * @return 缓存数据的对象
+     */
+    public <T> BoundSetOperations<String, T> setCacheSet(final String key, final T value)
+    {
+        BoundSetOperations<String, T> setOperation = redisTemplate.boundSetOps(key);
+        setOperation.add(value);
+        return setOperation;
+    }
+
+    /**
      * 获得缓存的set
      *
      * @param key
@@ -207,6 +217,18 @@ public class RedisCache
     }
 
     /**
+     * 删除Hash中的数据
+     *
+     * @param key
+     * @param hkey
+     */
+    public void delCacheMapValue(final String key, final String hkey)
+    {
+        HashOperations hashOperations = redisTemplate.opsForHash();
+        hashOperations.delete(key, hkey);
+    }
+
+    /**
      * 获取多个Hash中的数据
      *
      * @param key Redis键
@@ -227,26 +249,5 @@ public class RedisCache
     public Collection<String> keys(final String pattern)
     {
         return redisTemplate.keys(pattern);
-    }
-
-    /**
-     * 对指定key的键值减一
-     * @param key 键
-     * @return Long
-     */
-    public Long decrBy(String key) {
-        return redisTemplate.opsForValue().decrement(key);
-    }
-
-    /**
-     * 对指定key的键值增一
-     * @param key 键
-     * @return Long
-     */
-    public Long incrBy(String key) {
-        return redisTemplate.opsForValue().increment(key);
-    }
-    public Long getExpire(Object key){
-        return redisTemplate.getExpire(key);
     }
 }
