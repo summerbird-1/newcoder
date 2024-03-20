@@ -1,7 +1,10 @@
 package com.zjz.server.controller;
 
+import cn.hutool.core.bean.BeanUtil;
 import com.zjz.server.entity.ResponseResult;
+import com.zjz.server.entity.User;
 import com.zjz.server.entity.vo.UserVo;
+import com.zjz.server.service.LikeService;
 import com.zjz.server.service.UserService;
 import com.zjz.server.utils.UserHolder;
 import io.swagger.v3.oas.annotations.Parameter;
@@ -19,6 +22,8 @@ import java.util.Map;
 public class UserController {
     @Autowired
     private UserService userService;
+    @Autowired
+    private LikeService likeService;
 
     @PostMapping("/upload")
     public ResponseResult<?> upload(@RequestParam("file") MultipartFile file) {
@@ -49,4 +54,18 @@ public class UserController {
         map.put("url", url);
         return ResponseResult.okResult(map);
     }
+    @GetMapping("/{userId}/like")
+    public ResponseResult<?> getLikeCount(@PathVariable("userId") int userId){
+        return ResponseResult.okResult(likeService.findUserLikeCount(userId));
+    }
+    @GetMapping("/{userId}/info")
+    public ResponseResult<?> getUserInfo(@PathVariable("userId") int userId){
+        User user = userService.findUserById(userId);
+        if(user == null)
+            return ResponseResult.errorResult(404,"用户不存在");
+        UserVo userVo = BeanUtil.copyProperties(user, UserVo.class);
+        return ResponseResult.okResult(userVo);
+    }
+
+
 }
