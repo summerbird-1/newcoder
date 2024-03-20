@@ -54,7 +54,7 @@ public class HomeController {
         List<DiscussPost> discussPosts = discussPostService.selectDiscussPosts(0, page.getOffset(), page.getLimit(), orderMode);
 
         // 对查询到的帖子列表进行处理，封装成包含用户信息的Map列表
-        List<Map<String, Object>> postList = discussPosts.parallelStream()
+        List<Map<String, Object>> postList = discussPosts.stream()
                 .map(o -> {
                     Map<String, Object> map = new HashMap<>();
                     map.put("post", o);

@@ -20,4 +20,8 @@ public interface DiscussPostMapper {
 
 //    @Options(useGeneratedKeys=true, keyProperty="id", keyColumn="id")
     int InsertDiscussPost(DiscussPost discussPost);
+
+    DiscussPost selectDiscussPostById(int id);
+
+    int updateCommentCount(@Param("id") int id, @Param("commentCount") int commentCount);
 }

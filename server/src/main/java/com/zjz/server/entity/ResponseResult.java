@@ -106,7 +106,7 @@ public class ResponseResult<T> implements Serializable {
         return this;
     }
 
-    public ResponseResult<?> ok(T data) {
+    public  ResponseResult<?> ok(T data) {
         this.data = data;
         return this;
     }
