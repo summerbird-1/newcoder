@@ -4,9 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="319ed9d8-60d1-4576-a7b9-f5494f2c1f89" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Checkout_at_2024_6_17,_15_59_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="979694bc-c295-44c0-a6d5-21ca6bb6b096" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
@@ -14,16 +12,6 @@
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
-  </component>
-  <component name="Git.Settings">
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="main" />
-      </map>
-    </option>
-  </component>
-  <component name="HighlightingSettingsPerFile">
-    <setting file="file://$PROJECT_DIR$/community.sql" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -38,6 +26,7 @@
     </option>
   </component>
   <component name="ProjectId" id="2hLxDXFFXQxKPE6YhAUCR4jj2wZ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -55,24 +44,15 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="319ed9d8-60d1-4576-a7b9-f5494f2c1f89" name="Changes" comment="" />
+      <changelist id="979694bc-c295-44c0-a6d5-21ca6bb6b096" name="Changes" comment="" />
       <created>1717387040816</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717387040816</updated>
-<<<<<<< Updated upstream
-<<<<<<< HEAD
-      <workItem from="1717387042597" duration="3733000" />
-=======
-      <workItem from="1717387042597" duration="3257000" />
-      <workItem from="1718788974912" duration="672000" />
->>>>>>> v2.0
-=======
       <workItem from="1717387042597" duration="2793000" />
       <workItem from="1718963880589" duration="599000" />
       <workItem from="1719230217677" duration="598000" />
-      <workItem from="1719556431131" duration="311000" />
->>>>>>> Stashed changes
+      <workItem from="1719556431131" duration="1830000" />
     </task>
     <servers />
   </component>
@@ -90,7 +70,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/v2.0" />
+                        <option value="v2.0" />
                       </list>
                     </value>
                   </entry>
